@@ -5,4 +5,5 @@ console.log(date1.getTime()-start);
 function createAlarm() {
     var alarmLink = document.getElementById("link-input").value
     var alarmDate = document.getElementById("selected-time").value
+    
 }
