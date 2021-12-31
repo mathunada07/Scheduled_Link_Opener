@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="background.js"></script>
+    </head>
+    <body>
+        <div class="extension-header">
+            <h1>Scheduled Link Opener</h1>
+        </div>
+        <div class="calendar-input">
+            <form id="alarm-form" onsubmit="createAlarm()">
+                <label for="link-input">Enter a link</label>
+                <input type="url" id="link-input" name="link-input" required>
+                <label for="selected-time">Choose a date and time</label>
+                <input type="datetime-local" id="selected-time" name="selected-time" required>
+            </form>
+
+            <button type="submit" form="alarm-form">Submit</button>
+            
+        </div>
+    </body>
+</html>
