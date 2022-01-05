@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="extension-header">
-            <h1>Scheduled Link Opener</h1>
-        </div>
-        <div class="calendar-input">
-            <form id="alarm-form">
-                <label for="link-input">Enter a link</label>
-                <input type="url" id="link-input" name="link-input" required>
-                <label for="selected-time">Choose a date and time</label>
-                <input type="datetime-local" id="selected-time" name="selected-time" required>
-            </form>
 
-            <button type="submit" form="alarm-form">Submit</button>
-            
-        </div>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="extension-header">
+        <h1>Scheduled Link Opener</h1>
+    </div>
+    <div class="calendar-input">
+        <form id="alarm-form">
+            <div class="enter-link">
+                <label for="link-input">Enter a link:</label>
+                <input type="url" id="link-input" name="link-input" required>
+            </div>
+            <div class="enter-date">
+                <label for="selected-time">Choose a date and time:</label>
+                <input type="datetime-local" id="selected-time" name="selected-time" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" form="alarm-form">Submit</button>
+        <button id="clear-button">Clear all links</button>
+    </div>
+
+    <div class="extension-content">
+    </div>
         <script src="popup.js" defer></script>
-    </body>
+</body>
+
 </html>

@@ -2,3 +2,35 @@ html, body {
     width: 400px;
     height: 300px;
 }
+
+.url-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
+
+.extension-content {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+#alarm-form {
+    display: grid;
+    margin-right: 10px;
+    grid-column-gap: 10px;
+    width: 400px;
+    justify-content: center;
+}
+
+.enter-link {
+    margin-bottom: 10px;
+}
+
+.enter-date {
+    margin-bottom: 10px;
+}
+
+.link-holder {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
