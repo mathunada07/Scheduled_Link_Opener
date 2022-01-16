@@ -1,12 +1,82 @@
 html, body {
-    width: 400px;
+    width: 500px;
     height: 300px;
+    color: white;
+}
+
+body {
+    background: linear-gradient(-45deg, #573699, #0f626d, #0f226d);
+    background-size: 500% 500%;
+    animation: gradient 15s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 25% 50%;
+    }
+    50% {
+        background-position: 95% 80%;
+    }
+    100% {
+        background-position: 25% 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.enter-link, .enter-date {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+input {
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+label {
+    padding-right: 20px;
+    font-size: 13px;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.form-buttons button {
+    padding: 5px 10px 5px 10px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .url-display {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.url-display button {
+    height: 30px;
+    width: 70px;
 }
 
 .extension-content {
@@ -14,23 +84,11 @@ html, body {
     height: 200px;
 }
 
-#alarm-form {
-    display: grid;
-    margin-right: 10px;
-    grid-column-gap: 10px;
-    width: 400px;
-    justify-content: center;
-}
-
-.enter-link {
-    margin-bottom: 10px;
-}
-
-.enter-date {
-    margin-bottom: 10px;
-}
-
 .link-holder {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+a {
+    color: white;
 }

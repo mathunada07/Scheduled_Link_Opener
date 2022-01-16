@@ -1,7 +1,11 @@
+// listens to messages sent from popup.js.
 chrome.runtime.onMessage.addListener(function (message) {
+    // Clears all alarms
     if (message == "clear") {
         chrome.alarms.clearAll();
     }
+    // Sends information of stored alarms to popup.js to create a visual list of alarms upon 
+    //   reopening the extension.
     else if (message == "loaded") {
         var alarmsArray = chrome.alarms.getAll();
         alarmsArray.then(function (result) {
@@ -14,6 +18,7 @@ chrome.runtime.onMessage.addListener(function (message) {
         });
     }
     var alarmLink = message.link;
+    // creates or removes an alarm depending on the value of message.remove.
     if (message.remove == true) {
         chrome.alarms.clear(alarmLink);
     }
@@ -26,6 +31,7 @@ chrome.runtime.onMessage.addListener(function (message) {
     }
 });
 
+// Opens a new tab of the link (alarm's name) when the alarm fires.
 chrome.alarms.onAlarm.addListener(openLink);
 
 function openLink(alarm) {
