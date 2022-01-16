@@ -1,5 +1,5 @@
 {
-    "name": "Scheduled Link Opener",
+    "name": "Scheduled URL Opener",
     "description": "Open Links at Scheduled Times.",
     "version": "1.0",
     "manifest_version": 3,
