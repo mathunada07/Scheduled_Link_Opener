@@ -1,4 +1,4 @@
-[screenshot](scheduled_url_opener.png)
+<img src=https://github.com/mathunada07/Scheduled_URL_Opener/blob/main/scheduled_url_opener_screenshot.png></img>
 
 This is Scheduled URL Opener, an extension that opens links at scheduled times per your request! 
 
